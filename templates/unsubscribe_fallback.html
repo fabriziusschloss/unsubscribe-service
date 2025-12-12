@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Abmeldung</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .warning h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .warning ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .warning li {
+            margin: 5px 0;
+        }
+        .contact {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .contact p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 30px;
+            color: #888;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#128679;</div>
+        <h1>Abmelde-Link unvollstaendig</h1>
+
+        <div class="warning">
+            <h3>Was ist passiert?</h3>
+            <p>Der Abmelde-Link ist unvollstaendig. Dies kann passieren wenn:</p>
+            <ul>
+                <li>Der Link nicht vollstaendig kopiert wurde</li>
+                <li>Der Link abgelaufen oder ungueltig ist</li>
+                <li>Sie diese Seite direkt aufgerufen haben</li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <p>Moechten Sie sich trotzdem abmelden?</p>
+            <p>Kontaktieren Sie uns direkt:</p>
+            <a href="mailto:kontakt@aifomo.dev?subject=Newsletter%20Abmeldung">kontakt@aifomo.dev</a>
+        </div>
+
+        <div class="footer">
+            <p>Bitte geben Sie in Ihrer E-Mail die Adresse an,<br>die Sie abmelden moechten.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Coolify Nixpacks Konfiguration
+# Port 3000 ist Coolify Standard
+
+[start]
+cmd = "gunicorn -w 4 -b 0.0.0.0:3000 main:app"

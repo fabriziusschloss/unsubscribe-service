@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSGVO Abmelde-Service</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .logo {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .status {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #28a745;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .info-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .info-box h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .endpoint {
+            background: #e9ecef;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 13px;
+            color: #495057;
+        }
+        .endpoint code {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 12px;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">&#128274;</div>
+        <h1>DSGVO Abmelde-Service</h1>
+        <p class="subtitle">Newsletter Abmeldungen DSGVO-konform verwalten</p>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            <span>Service aktiv</span>
+        </div>
+
+        <div class="info-box">
+            <h3>API Endpunkte</h3>
+            <div class="endpoint">
+                <code>GET</code> /unsubscribe/&lt;uuid&gt; - Abmeldeseite
+            </div>
+            <div class="endpoint">
+                <code>POST</code> /api/unsubscribe - Abmeldung durchfuehren
+            </div>
+            <div class="endpoint">
+                <code>GET</code> /api/status/&lt;uuid&gt; - Status pruefen
+            </div>
+            <div class="endpoint">
+                <code>GET</code> /health - Health Check
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Teil des AI FOMO Newsletter Systems</p>
+            <p><a href="mailto:kontakt@aifomo.dev">kontakt@aifomo.dev</a></p>
+        </div>
+    </div>
+</body>
+</html>
