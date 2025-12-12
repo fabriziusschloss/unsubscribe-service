@@ -82,11 +82,10 @@ def unsubscribe_user(uuid: str) -> tuple[bool, str]:
     email = subscriber.get("email", "unbekannt")
 
     try:
-        # Update: Setze Abmelde-Datum und Status
+        # Update: Setze Optoutdatum (NocoDB Feldname)
         patch_data = {
             "Id": record_id,
-            "abgemeldet": True,
-            "abmeldedatum": datetime.now().isoformat()
+            "Optoutdatum": datetime.now().strftime("%Y-%m-%d")
         }
 
         response = requests.patch(
@@ -179,8 +178,8 @@ def api_status(uuid):
         "found": True,
         "email": subscriber.get("email", ""),
         "name": subscriber.get("name", ""),
-        "abgemeldet": subscriber.get("abgemeldet", False),
-        "abmeldedatum": subscriber.get("abmeldedatum", None)
+        "optout": subscriber.get("Optoutdatum") is not None,
+        "optoutdatum": subscriber.get("Optoutdatum")
     })
 
 
